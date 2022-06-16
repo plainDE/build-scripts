@@ -10,22 +10,22 @@ git clone https://aur.archlinux.org/plainde-meta.git
 
 cd plainpanel
 makepkg --sign
-cp *.tar.zst* ../
+cp *.tar.* ../
 cd ..
 
 cd plainabout
 makepkg --sign
-cp *.tar.zst* ../
+cp *.tar.* ../
 cd ..
 
 cd plaincontrolcenter
 makepkg --sign
-cp *.tar.zst* ../
+cp *.tar.* ../
 cd ..
 
 cd plainde-meta
 makepkg --sign
-cp *.tar.zst* ../
+cp *.tar.* ../
 cd ..
 
 # Cleanup
