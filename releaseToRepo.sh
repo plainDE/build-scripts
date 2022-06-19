@@ -7,13 +7,13 @@ bash ./buildArch.sh # build and sign pacman packages
 
 git clone git@github.com:plainDE/linux-repo.git # get current repository
 
-mv *tar* linux-repo/arch/$(arch)/
-cd linux-repo/arch/$(arch)
-repo-add --verify --sign plainDE.db.tar.zst *tar*
+mv *tar* linux-repo/arch/$(uname -m)/
+cd linux-repo/arch/$(uname -m)
+repo-add --verify --sign plainDE.db.tar.zst *tar.zst
 rm -rf *old*
 
 git add *
 
-git commit -a -S -m "Update $(arch) packages to $RELEASEVER"
+git commit -a -S -m "Update $(uname -m) packages to $RELEASEVER"
 
 # git push
