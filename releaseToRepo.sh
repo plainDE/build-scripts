@@ -10,7 +10,7 @@ git clone git@github.com:plainDE/linux-repo.git # get current repository
 mv *.tar.* linux-repo/arch/$(uname -m)/
 cd linux-repo/arch/$(uname -m)
 rm -rf *
-repo-add --verify --sign plainDE.db.tar.zst *.tar.zst *.tar.gz
+repo-add --verify --sign plainDE.db.tar.zst *.tar.*
 git add *
 
 git commit -a -S -m "Update $(uname -m) packages to $RELEASEVER"
