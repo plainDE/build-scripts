@@ -7,9 +7,9 @@ bash ./buildArch.sh # build and sign pacman packages
 
 git clone git@github.com:plainDE/linux-repo.git # get current repository
 
+rm -rf linux-repo/arch/$(uname -m)/*
 mv *.tar.* linux-repo/arch/$(uname -m)/
 cd linux-repo/arch/$(uname -m)
-rm -rf *
 repo-add --verify --sign plainDE.db.tar.zst *.tar.*
 git add *
 
